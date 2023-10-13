@@ -1,0 +1,133 @@
+$gray-darker: #444444;
+$gray-dark: #696969;
+$gray: #999999;
+$gray-light: #cccccc;
+$gray-lighter: #ececec;
+$gray-lightest: lighten($gray-lighter, 4%);
+$shopee-color: #ee4d2d;
+$lazada-color: #000099;
+$white-color: #fff;
+$black-color: #000;
+
+.etalse {
+    color: $gray;
+    font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding: 1rem;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    img {
+        height: auto;
+        width: 100%;
+        vertical-align: top;
+        display:inline-block;
+    }
+
+    .btn__shopee {
+        background-color: $shopee-color;
+        border: 1px solid $shopee-color;
+        border-radius: 0.25rem;
+        color: $white-color;
+        padding: 0.5rem;
+        font-size: 14px;
+        font-weight: 500;
+        width: 100%;
+        margin-top: 5px;
+    }
+    
+    .btn__lazada {
+      background-color: $lazada-color;
+      border: 1px solid $lazada-color;
+      border-radius: 0.25rem;
+      color: $white-color;
+      padding: 0.5rem;
+      font-size: 14px;
+      font-weight: 500;
+      width: 100%;
+      margin-top: 5px;
+  }
+
+    .cards__item {
+        float: left;
+        padding: 5px 0 10px 0;
+        width: 100%;
+        
+      }
+
+    .card {
+        background-color: white;
+        border-radius: 0.25rem;
+        box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+        align-items: start;
+        display: flex;
+        flex-direction: row !important;
+        overflow: hidden;
+        &:hover {
+          .card__image {
+            filter: contrast(100%);
+          }
+        }
+      }
+
+    .card__image {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 5px;
+        filter: contrast(70%);
+        //filter: saturate(180%);
+        //overflow: hidden;
+        max-width: 20%;
+
+        transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+        &::before {
+            content: "";
+            display:inline-block;
+            padding-top: 56.25%; // 16:9 aspect ratio
+        }
+        @media (min-width: 40rem) {
+            &::before {
+            padding-top: 66.6%; // 3:2 aspect ratio
+            }
+        }
+    }
+
+    .card__content {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      margin: 5px 10px 10px 5px;
+    }
+
+    .card__title {
+        color: $gray-darker;
+        font-size: 0.875rem;
+        font-weight: 700!important;
+    }
+
+    .card__text {
+        font-size: 0.875rem;
+        margin-bottom: 5px;
+    }
+
+    .card__button {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      margin: 5px 10px 10px 5px;
+      max-width: 20%;
+      align-items: center;
+    }
+
+    .card__etalase {
+      color: $gray-darker;
+      font-size: 1.875rem;
+      font-weight: 700!important;
+      margin-top: 5px;
+      margin-bottom: 5px;
+  }
+}
